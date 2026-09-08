@@ -1,0 +1,17 @@
+name: Checks
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          persist-credentials: false
+      - run: python3 -m unittest discover -s . -q
+      - run: python3 -m unittest discover -s slack-bridge -q
+      - run: python3 -m unittest discover -s tools -q
+      - run: node --test copilot-bridge/core.test.js
+      - run: python3 tools/check_public_tree.py

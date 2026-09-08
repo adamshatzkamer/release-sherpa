@@ -1,0 +1,4 @@
+name: release-shepherd-demand
+description: Queue an explicit release review request from the configured Slack owner.
+events:
+  - agent:start

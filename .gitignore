@@ -1,0 +1,19 @@
+# Local configuration and generated artifacts
+config.json
+config.local.json
+bridge.local.json
+**/bridge-config.json
+state/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+.venv/
+node_modules/
+*.vsix
+*.log
+*.pem
+*.key
+.DS_Store
+dist/

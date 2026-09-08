@@ -1,0 +1,56 @@
+{
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "run_id",
+    "head_sha",
+    "base_sha",
+    "diff_base_sha",
+    "summary",
+    "review_markdown",
+    "verdict",
+    "merge_ready",
+    "deploy_ready",
+    "blockers"
+  ],
+  "properties": {
+    "run_id": {
+      "type": "string"
+    },
+    "head_sha": {
+      "type": "string"
+    },
+    "base_sha": {
+      "type": "string"
+    },
+    "diff_base_sha": {
+      "type": "string"
+    },
+    "summary": {
+      "type": "string"
+    },
+    "review_markdown": {
+      "type": "string"
+    },
+    "verdict": {
+      "type": "string",
+      "enum": [
+        "approved",
+        "blocked",
+        "changes_requested"
+      ]
+    },
+    "merge_ready": {
+      "type": "boolean"
+    },
+    "deploy_ready": {
+      "type": "boolean"
+    },
+    "blockers": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}

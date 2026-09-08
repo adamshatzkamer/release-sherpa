@@ -1,0 +1,35 @@
+{
+  "name": "release-shepherd-copilot",
+  "displayName": "Release Shepherd \u2014 Copilot Reviews",
+  "description": "Reviews local release batches through the Copilot provider only. No generic chat routing or source writes.",
+  "version": "0.1.0",
+  "publisher": "paperclip-local",
+  "engines": {
+    "vscode": "^1.100.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "capabilities": {
+    "untrustedWorkspaces": {
+      "supported": false
+    }
+  },
+  "contributes": {
+    "commands": [
+      {
+        "command": "releaseShepherd.connectCopilot",
+        "title": "Release Shepherd: Connect Copilot Reviewer"
+      },
+      {
+        "command": "releaseShepherd.showStatus",
+        "title": "Release Shepherd: Show Copilot Status"
+      }
+    ]
+  },
+  "license": "MIT"
+}

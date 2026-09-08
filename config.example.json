@@ -1,0 +1,28 @@
+{
+  "ssh_host": "operator@example.invalid",
+  "paperclip_url": "http://127.0.0.1:3100",
+  "company_id": "YOUR_COMPANY_ID",
+  "code": "code",
+  "groups": [
+    {
+      "name": "example-app",
+      "task_prefix": "APP",
+      "base_repo": "example-org/example-app",
+      "base_branch": "main",
+      "sources": [
+        {
+          "repo": "example-org/example-app",
+          "path": "/srv/repos/example-app"
+        }
+      ],
+      "checks": [],
+      "deployment_verified": false,
+      "render_service": "YOUR_RENDER_SERVICE_ID",
+      "auto_prepare": false
+    }
+  ],
+  "review_policy": {
+    "preferred": "GitHub Copilot in VS Code",
+    "codex_on_quota_exhaustion": false
+  }
+}

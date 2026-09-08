@@ -1,0 +1,13 @@
+{
+  "owner_id": "YOUR_SLACK_USER_ID",
+  "group": "example-app",
+  "queue_dir": "/srv/release-shepherd/requests",
+  "bot_id": "review-bot",
+  "profiles": {
+    "review-bot": "/srv/bots/review-bot"
+  },
+  "ssh_host": "operator@example.invalid",
+  "remote_python": "python3",
+  "remote_broker": "/srv/release-shepherd/slack-bridge/broker.py",
+  "codex": "codex"
+}
